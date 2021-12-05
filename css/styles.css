@@ -289,7 +289,7 @@ img {
 	transition: transform var(--animation-duration) var(--timing-function);
 
 	width: 528px;
-	min-height: 581px;
+	height: 581px;
 	top: 50%;
 	left: 50%;
 	padding: 40px;
@@ -314,10 +314,19 @@ img {
 
 	background-color: var(--primary-white-color);
 	border: 1px solid rgba(0, 0, 0, 0.1);
+	outline-color: transparent;
+
+	transition: outline-color var(--animation-duration) var(--timing-function);
+}
+
+.hero-modal-close:hover,
+.hero-modal-close:focus {
+	outline-color: var(--accent-color);
 }
 
 .hero-modal-x {
 	fill: #000;
+	transition: fill var(--animation-duration) var(--timing-function);
 }
 
 .hero-modal-close:hover .hero-modal-x,
@@ -341,12 +350,12 @@ img {
 }
 
 .label-contacts {
-	display: inline-block;
+	display: block;
 	margin-bottom: 4px;
 
 	font-weight: 400;
 	font-size: 12px;
-	line-height: 1.16;
+	line-height: 1.17;
 	letter-spacing: 0.01em;
 	color: var(--primary-text-color);
 }
@@ -358,8 +367,14 @@ img {
 	padding-left: 42px;
 
 	border-radius: 4px;
-	outline-color: var(--accent-color);
+
 	border: 1px solid rgba(33, 33, 33, 0.2);
+	outline-color: transparent;
+	transition: outline-color var(--animation-duration) var(--timing-function);
+}
+
+.input-contacts:focus {
+	outline-color: var(--accent-color);
 }
 
 .input-contacts:focus + .input-contacts-icon {
@@ -382,16 +397,22 @@ img {
 	transform: translateY(-50%);
 }
 
+.textarea {
+	margin-bottom: 20px;
+}
+
 .form-textarea {
 	width: 100%;
 	height: 120px;
 	padding: 12px 16px;
-	margin-bottom: 20px;
+	margin-top: 4px;
 	resize: none;
 
 	border-radius: 4px;
-	outline-color: var(--accent-color);
+	outline-color: transparent;
 	border: 1px solid rgba(33, 33, 33, 0.2);
+
+	transition: outline-color var(--animation-duration) var(--timing-function);
 }
 
 .form-textarea::placeholder {
@@ -401,6 +422,10 @@ img {
 	letter-spacing: 0.01em;
 
 	color: rgba(117, 117, 117, 0.5);
+}
+
+.form-textarea:focus {
+	outline-color: var(--accent-color);
 }
 
 .policy-container {
@@ -413,7 +438,7 @@ img {
 .policy-checkbox:checked + .policy-checkbox-new {
 	fill: var(--primary-white-color);
 	background-color: var(--accent-color);
-	border: none;
+	border: transparent;
 }
 
 .policy-checkbox:focus-visible + .policy-checkbox-new {
@@ -427,7 +452,7 @@ img {
 
 	transition: fill var(--animation-duration) var(--timing-function),
 		background-color var(--animation-duration) var(--timing-function),
-		border var(--animation-duration) var(--timing-function);
+		border-color var(--animation-duration) var(--timing-function);
 
 	fill: transparent;
 	background-color: transparent;
@@ -449,6 +474,12 @@ img {
 .policy-link {
 	text-decoration-skip-ink: none;
 	color: var(--accent-color);
+	outline-color: transparent;
+	transition: outline-color var(--animation-duration) var(--timing-function);
+}
+
+.policy-link:focus {
+	outline-color: var(--accent-color);
 }
 
 .btn-submit {
@@ -469,6 +500,12 @@ img {
 	color: var(--primary-white-color);
 	box-shadow: 0px 4px 4px rgba(0, 0, 0, 0.15);
 	background-color: var(--accent-color);
+	outline-color: transparent;
+	transition: outline-color var(--animation-duration) var(--timing-function);
+}
+
+.btn-submit:focus {
+	outline-color: var(--accent-color);
 }
 
 /* -------advantages------- */

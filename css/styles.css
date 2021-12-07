@@ -370,11 +370,13 @@ img {
 
 	border: 1px solid rgba(33, 33, 33, 0.2);
 	outline-color: transparent;
-	transition: outline-color var(--animation-duration) var(--timing-function);
+
+	transition: border-color var(--animation-duration) var(--timing-function);
 }
 
 .input-contacts:focus {
-	outline-color: var(--accent-color);
+	border-color: var(--accent-color);
+	border-width: 2px;
 }
 
 .input-contacts:focus + .input-contacts-icon {
@@ -412,7 +414,7 @@ img {
 	outline-color: transparent;
 	border: 1px solid rgba(33, 33, 33, 0.2);
 
-	transition: outline-color var(--animation-duration) var(--timing-function);
+	transition: border-color var(--animation-duration) var(--timing-function);
 }
 
 .form-textarea::placeholder {
@@ -425,7 +427,8 @@ img {
 }
 
 .form-textarea:focus {
-	outline-color: var(--accent-color);
+	border-color: var(--accent-color);
+	border-width: 2px;
 }
 
 .policy-container {
@@ -836,13 +839,8 @@ img {
 	background-color: var(--accent-color);
 }
 
-.footer-form {
-	display: flex;
-	align-items: flex-end;
-}
-
 .footer-form-div {
-	display: block;
+	display: flex;
 }
 
 .footer-form-label {
